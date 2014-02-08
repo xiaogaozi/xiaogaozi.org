@@ -1,0 +1,27 @@
+### /Users/xiaogaozi/.gitignore-boilerplates/Node.gitignore
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+build
+
+node_modules
+
+
+### /Users/xiaogaozi/.gitignore-boilerplates/Global/Vim.gitignore
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
