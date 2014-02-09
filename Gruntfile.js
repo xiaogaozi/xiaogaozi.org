@@ -33,7 +33,8 @@ module.exports = function(grunt) {
         files: ['index.html', 'stylesheets/*.css', 'javascripts/*.js'],
         options: {
           livereload: true
-        }
+        },
+        tasks: ['build']
       }
     },
 
@@ -43,6 +44,43 @@ module.exports = function(grunt) {
         // Gets the port from the connect configuration
         path: 'http://localhost:<%= express.all.options.port%>'
       }
+    },
+
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          src: ['*.ico', 'images/*'],
+          dest: 'dist/public/'
+        }]
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true
+        },
+        files: {
+          'dist/public/index.html': 'index.html'
+        }
+      }
+    },
+
+    uglify: {
+      dist: {
+        files: {
+          'dist/public/javascripts/main.js': ['javascripts/*.js']
+        }
+      }
+    },
+
+    cssmin: {
+      dist: {
+        files: {
+          'dist/public/stylesheets/main.css': ['stylesheets/*.css']
+        }
+      }
     }
   });
 
@@ -51,6 +89,13 @@ module.exports = function(grunt) {
     'express',
     'open',
     'watch'
+  ]);
+
+  grunt.registerTask('build', [
+    'copy',
+    'htmlmin',
+    'uglify',
+    'cssmin'
   ]);
 
 };

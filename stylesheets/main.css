@@ -1,4 +1,5 @@
 body {
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -32,11 +33,21 @@ dd {
   padding: 0;
 }
 
+.home {
+  background: url('http://farm3.staticflickr.com/2875/12401269175_cc6c39e579_h.jpg') center center no-repeat fixed #1F8DD6;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+
 .header {
   padding: 0.5em;
-  text-align: center;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
   background-color: #2D3E50;
+  opacity: 0.5;
 }
 
 .header ul {
@@ -54,28 +65,25 @@ dd {
   color: #AECFE5;
 }
 
-.home {
+.intro {
   margin: auto;
-  text-align: center;
   padding: 40px 0 0;
-  background: url('http://farm4.staticflickr.com/3682/9080062839_aa90d84a5f_h.jpg') center center no-repeat #1F8DD6;
-  height: 100%;
 }
 
-.home img.avatar {
+.intro img.avatar {
   border-radius: 50%;
   margin: 2em 0 3.5em;
   width: 100px;
 }
 
-.home a {
+.intro a {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid;
 }
 
-.home a:hover,
-.home a:focus {
+.intro a:hover,
+.intro a:focus {
   color: black;
 }
 
@@ -85,8 +93,12 @@ dd {
   background-color: white;
 }
 
-.projects p {
-  color: black;
+.projects .center-block {
+  float: none;
+}
+
+.projects h3 {
+  margin-top: 40px;
 }
 
 .section {
