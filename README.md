@@ -2,11 +2,15 @@
 
 my personal website
 
+## Bootstrap
+
+```bash
+$ ./bootstrap.sh
+```
+
 ## Development
 
 ```bash
-$ git clone git@github.com:xiaogaozi/xiaogaozi.org.git dist
-$ npm install
 $ grunt server
 ```
 
