@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // Load Grunt tasks declared in the package.json file
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  // Configure Grunt 
+  // Configure Grunt
   grunt.initConfig({
 
     // grunt-express will serve the files from the folders listed in `bases`
