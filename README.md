@@ -1,6 +1,6 @@
 # xiaogaozi.org
 
-my personal website
+My personal website
 
 ## Bootstrap
 

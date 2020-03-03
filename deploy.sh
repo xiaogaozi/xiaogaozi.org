@@ -5,6 +5,6 @@ set -x
 
 grunt build
 cd dist
-git commit -am 'update'
+git commit -am 'Update'
 git push origin master
 git push heroku master
